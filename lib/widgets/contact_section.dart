@@ -107,9 +107,10 @@ class _ContactSectionState extends State<ContactSection> {
           style: TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.bold,
-            foreground: Paint()..shader = AppTheme.primaryGradient.createShader(
-              const Rect.fromLTWH(0, 0, 400, 40),
-            ),
+            foreground: Paint()
+              ..shader = AppTheme.primaryGradient.createShader(
+                const Rect.fromLTWH(0, 0, 400, 40),
+              ),
           ),
         ),
       ],
@@ -117,7 +118,11 @@ class _ContactSectionState extends State<ContactSection> {
   }
 
   List<Widget> _buildMobileContent() {
-    return [_buildContactInfo(), const SizedBox(height: 48), _buildContactForm()];
+    return [
+      _buildContactInfo(),
+      const SizedBox(height: 48),
+      _buildContactForm(),
+    ];
   }
 
   Widget _buildContactInfo() {
@@ -135,11 +140,11 @@ class _ContactSectionState extends State<ContactSection> {
           ),
         ),
         const SizedBox(height: 32),
-        _buildContactItem(Icons.email, 'Email', 'alex@example.com'),
+        _buildContactItem(Icons.email, 'Email', 'suhlaingoo7723@example.com'),
         const SizedBox(height: 20),
-        _buildContactItem(Icons.phone, 'Phone', '+1 (555) 123-4567'),
+        _buildContactItem(Icons.phone, 'Phone', '+959 766 421 457'),
         const SizedBox(height: 20),
-        _buildContactItem(Icons.location_on, 'Location', 'San Francisco, CA'),
+        _buildContactItem(Icons.location_on, 'Location', 'Yangon , Myanmar'),
         const SizedBox(height: 32),
         const Text(
           'Available for',
@@ -226,10 +231,7 @@ class _ContactSectionState extends State<ContactSection> {
           const SizedBox(width: 6),
           Text(
             label,
-            style: const TextStyle(
-              color: AppTheme.textSecondary,
-              fontSize: 13,
-            ),
+            style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
           ),
         ],
       ),
@@ -340,10 +342,7 @@ class _ContactSectionState extends State<ContactSection> {
         const SizedBox(height: 8),
         const Text(
           'I\'ll get back to you within 24 hours.',
-          style: TextStyle(
-            color: AppTheme.textSecondary,
-            fontSize: 14,
-          ),
+          style: TextStyle(color: AppTheme.textSecondary, fontSize: 14),
         ),
         const SizedBox(height: 32),
       ],

@@ -14,7 +14,9 @@ class FooterSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 40),
       decoration: BoxDecoration(
         color: AppTheme.background,
-        border: const Border(top: BorderSide(color: AppTheme.border, width: 0.5)),
+        border: const Border(
+          top: BorderSide(color: AppTheme.border, width: 0.5),
+        ),
       ),
       child: Center(
         child: Container(
@@ -37,22 +39,20 @@ class FooterSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'AC',
+            'SH',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-              foreground: Paint()..shader = AppTheme.primaryGradient.createShader(
-                const Rect.fromLTWH(0, 0, 50, 30),
-              ),
+              foreground: Paint()
+                ..shader = AppTheme.primaryGradient.createShader(
+                  const Rect.fromLTWH(0, 0, 50, 30),
+                ),
             ),
           ),
           const SizedBox(height: 8),
           const Text(
-            'Senior Flutter Developer',
-            style: TextStyle(
-              color: AppTheme.textMuted,
-              fontSize: 13,
-            ),
+            'Flutter Developer',
+            style: TextStyle(color: AppTheme.textMuted, fontSize: 13),
           ),
         ],
       ),
@@ -71,11 +71,8 @@ class FooterSection extends StatelessWidget {
       ),
       SizedBox(height: isMobile ? 24 : 0),
       const Text(
-        '© 2025 Alex Chen. Built with Flutter.',
-        style: TextStyle(
-          color: AppTheme.textMuted,
-          fontSize: 13,
-        ),
+        '© 2026 Su Hlaing Oo. Built with Flutter.',
+        style: TextStyle(color: AppTheme.textMuted, fontSize: 13),
       ),
     ];
   }
@@ -96,11 +93,7 @@ class FooterSection extends StatelessWidget {
           child: InkWell(
             borderRadius: BorderRadius.circular(10),
             onTap: () {},
-            child: Icon(
-              icon,
-              color: AppTheme.textMuted,
-              size: 18,
-            ),
+            child: Icon(icon, color: AppTheme.textMuted, size: 18),
           ),
         ),
       ),

@@ -53,7 +53,9 @@ class _NavBarState extends State<NavBar> {
             ? AppTheme.background.withValues(alpha: 0.95)
             : Colors.transparent,
         border: _isScrolled
-            ? const Border(bottom: BorderSide(color: AppTheme.border, width: 0.5))
+            ? const Border(
+                bottom: BorderSide(color: AppTheme.border, width: 0.5),
+              )
             : null,
       ),
       child: Container(
@@ -62,13 +64,14 @@ class _NavBarState extends State<NavBar> {
           children: [
             const SizedBox(width: 32),
             Text(
-              'AC',
+              'SH',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                foreground: Paint()..shader = const LinearGradient(
-                  colors: [AppTheme.primary, AppTheme.secondary],
-                ).createShader(const Rect.fromLTWH(0, 0, 50, 30)),
+                foreground: Paint()
+                  ..shader = const LinearGradient(
+                    colors: [AppTheme.primary, AppTheme.secondary],
+                  ).createShader(const Rect.fromLTWH(0, 0, 50, 30)),
               ),
             ),
             const Spacer(),
@@ -83,13 +86,20 @@ class _NavBarState extends State<NavBar> {
                     widget.onSectionTap(widget.sections[i]);
                   },
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 8,
+                    ),
                     child: Text(
                       widget.sections[i],
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
-                        color: isActive ? AppTheme.primary : AppTheme.textSecondary,
+                        fontWeight: isActive
+                            ? FontWeight.w600
+                            : FontWeight.w400,
+                        color: isActive
+                            ? AppTheme.primary
+                            : AppTheme.textSecondary,
                         letterSpacing: 1,
                       ),
                     ),

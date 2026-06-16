@@ -79,7 +79,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
             controller: _scrollController,
             child: Column(
               children: [
-                HeroSection(key: _sectionKeys['Home']),
+                HeroSection(
+                  key: _sectionKeys['Home'],
+                  onViewWork: () => _scrollToSection('Projects'),
+                  onGetInTouch: () => _scrollToSection('Contact'),
+                ),
                 AboutSection(key: _sectionKeys['About']),
                 SkillsSection(key: _sectionKeys['Skills']),
                 ExperienceSection(key: _sectionKeys['Experience']),

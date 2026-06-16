@@ -57,68 +57,101 @@ class Project {
 }
 
 class PortfolioData {
-  static const String name = 'Alex Chen';
-  static const String title = 'Senior Flutter Developer';
-  static const String tagline = 'Crafting exceptional cross-platform experiences';
-  static const String email = 'alex@example.com';
-  static const String phone = '+1 (555) 123-4567';
-  static const String location = 'San Francisco, CA';
-  static const String aboutHeadline = 'Building the future, one widget at a time';
+  static const String name = 'Su Hlaing Oo';
+  static const String title = 'Flutter Developer';
+  static const String tagline =
+      'Crafting exceptional cross-platform experiences';
+  static const String email = 'suhlaingoo7723@gmail.com.com';
+  static const String phone = '+959 766 421 457';
+  static const String location = 'Yangon, Myanmar';
+  static const String aboutHeadline =
+      'Building the future, one widget at a time';
   static const String aboutBody =
-    'With over 8 years of experience in mobile development and 5+ years specializing in Flutter, '
-    'I architect and deliver high-performance, pixel-perfect applications used by millions. '
-    'My passion lies in crafting elegant solutions to complex problems, bridging the gap between '
-    'design and engineering to create seamless user experiences.';
+      'With over 5+ years of experience in mobile development and 4+ years specializing in Flutter, '
+      'I architect and deliver high-performance, pixel-perfect applications used by millions. '
+      'My passion lies in crafting elegant solutions to complex problems, bridging the gap between '
+      'design and engineering to create seamless user experiences.';
 
   static const List<Skill> skills = [
-    Skill(name: 'Flutter & Dart', level: 0.95, icon: Icons.phone_android, color: Color(0xFF7C4DFF)),
-    Skill(name: 'State Management', level: 0.90, icon: Icons.account_tree, color: Color(0xFF00E5FF)),
-    Skill(name: 'Firebase', level: 0.85, icon: Icons.fireplace, color: Color(0xFFFFCA28)),
-    Skill(name: 'CI/CD & DevOps', level: 0.80, icon: Icons.settings, color: Color(0xFFFF6B6B)),
-    Skill(name: 'UI/UX Design', level: 0.85, icon: Icons.palette, color: Color(0xFF7C4DFF)),
-    Skill(name: 'RESTful APIs', level: 0.90, icon: Icons.api, color: Color(0xFF00E5FF)),
-    Skill(name: 'Testing', level: 0.80, icon: Icons.checklist, color: Color(0xFF66BB6A)),
-    Skill(name: 'Native Development', level: 0.70, icon: Icons.code, color: Color(0xFFFFCA28)),
+    Skill(
+      name: 'Flutter & Dart',
+      level: 0.95,
+      icon: Icons.phone_android,
+      color: Color(0xFF7C4DFF),
+    ),
+    Skill(
+      name: 'State Management',
+      level: 0.90,
+      icon: Icons.account_tree,
+      color: Color(0xFF00E5FF),
+    ),
+    Skill(
+      name: 'Firebase',
+      level: 0.85,
+      icon: Icons.fireplace,
+      color: Color(0xFFFFCA28),
+    ),
+    Skill(
+      name: 'CI/CD & DevOps',
+      level: 0.80,
+      icon: Icons.settings,
+      color: Color(0xFFFF6B6B),
+    ),
+    Skill(
+      name: 'UI/UX Design',
+      level: 0.85,
+      icon: Icons.palette,
+      color: Color(0xFF7C4DFF),
+    ),
+    Skill(
+      name: 'RESTful APIs',
+      level: 0.90,
+      icon: Icons.api,
+      color: Color(0xFF00E5FF),
+    ),
+    Skill(
+      name: 'Testing',
+      level: 0.80,
+      icon: Icons.checklist,
+      color: Color(0xFF66BB6A),
+    ),
+    Skill(
+      name: 'Native Development',
+      level: 0.70,
+      icon: Icons.code,
+      color: Color(0xFFFFCA28),
+    ),
   ];
 
   static const List<Experience> experiences = [
     Experience(
-      title: 'Senior Flutter Developer',
-      company: 'TechCorp Inc.',
-      location: 'San Francisco, CA',
-      period: 'Jan 2022 - Present',
+      title: 'Flutter Developer',
+      company: 'Oriental Vigour Co.Ltd',
+      location: 'Yangon, Myanmar',
+      period: 'April 2022 - Present',
       type: 'Full-time',
       highlights: [
-        'Architected and led development of 3 major Flutter apps reaching 2M+ users',
+        'Architected and led development of 3 major Flutter apps reaching 1M+ users',
         'Established coding standards and CI/CD pipelines reducing release time by 60%',
-        'Mentored 6 junior developers through structured code reviews and pair programming',
         'Optimized app performance achieving 99th percentile frame rendering',
       ],
     ),
     Experience(
-      title: 'Flutter Developer',
-      company: 'StartupXYZ',
-      location: 'Remote',
-      period: 'Mar 2019 - Dec 2021',
+      title: 'Software Engineer',
+      company: 'Being Myanamr Co.Ltd',
+      location: 'Yangon , Myanmar',
+      period: 'Jan 2020 - July 2020',
       type: 'Full-time',
-      highlights: [
-        'Built cross-platform fintech app from scratch using Flutter and BLoC pattern',
-        'Implemented complex animations and custom painters for rich UI experiences',
-        'Integrated Firebase services including Auth, Firestore, and Cloud Functions',
-        'Reduced app size by 40% through code optimization and asset management',
-      ],
+      highlights: [],
     ),
     Experience(
       title: 'Mobile Developer',
       company: 'AppStudio Pro',
       location: 'New York, NY',
-      period: 'Jun 2016 - Feb 2019',
-      type: 'Full-time',
+      period: 'May 2019 - August 2019',
+      type: 'Internship',
       highlights: [
-        'Developed and maintained Android applications using Kotlin and Java',
-        'Transitioned team\'s primary framework from native to Flutter',
-        'Implemented Material Design guidelines ensuring platform consistency',
-        'Achieved 4.8+ star rating on Google Play Store across multiple apps',
+        'Developed and maintained Android applications using Ionic and Angular',
       ],
     ),
   ];
@@ -126,7 +159,8 @@ class PortfolioData {
   static const List<Project> projects = [
     Project(
       title: 'FinTech Wallet',
-      description: 'A comprehensive digital wallet with real-time transactions, budgeting tools, and investment tracking. Features biometric auth and instant P2P payments.',
+      description:
+          'A comprehensive digital wallet with real-time transactions, budgeting tools, and investment tracking. Features biometric auth and instant P2P payments.',
       technologies: ['Flutter', 'BLoC', 'Firebase', 'Stripe', 'Rive'],
       gradientStart: Color(0xFF7C4DFF),
       gradientEnd: Color(0xFF448AFF),
@@ -137,7 +171,8 @@ class PortfolioData {
     ),
     Project(
       title: 'HealthTrack',
-      description: 'Health monitoring platform connecting patients with providers. Includes HIPAA-compliant messaging, telemedicine, and wearable device integration.',
+      description:
+          'Health monitoring platform connecting patients with providers. Includes HIPAA-compliant messaging, telemedicine, and wearable device integration.',
       technologies: ['Flutter', 'GetX', 'AWS', 'WebRTC', 'Hive'],
       gradientStart: Color(0xFF00E5FF),
       gradientEnd: Color(0xFF1DE9B6),
@@ -148,8 +183,15 @@ class PortfolioData {
     ),
     Project(
       title: 'SocialConnect',
-      description: 'Real-time social networking app with stories, live streaming, and AI-powered content recommendations. Supports 50K+ concurrent users.',
-      technologies: ['Flutter', 'Riverpod', 'Supabase', 'Appwrite', 'Socket.IO'],
+      description:
+          'Real-time social networking app with stories, live streaming, and AI-powered content recommendations. Supports 50K+ concurrent users.',
+      technologies: [
+        'Flutter',
+        'Riverpod',
+        'Supabase',
+        'Appwrite',
+        'Socket.IO',
+      ],
       gradientStart: Color(0xFFFF6B6B),
       gradientEnd: Color(0xFFFFCA28),
       icon: Icons.groups,
@@ -158,7 +200,8 @@ class PortfolioData {
     ),
     Project(
       title: 'EcoMarket',
-      description: 'Sustainable marketplace for eco-friendly products with carbon footprint tracking, reward system, and community-driven reviews.',
+      description:
+          'Sustainable marketplace for eco-friendly products with carbon footprint tracking, reward system, and community-driven reviews.',
       technologies: ['Flutter', 'Provider', 'Stripe', 'Algolia', 'Firebase'],
       gradientStart: Color(0xFF66BB6A),
       gradientEnd: Color(0xFF1DE9B6),
@@ -169,7 +212,8 @@ class PortfolioData {
     ),
     Project(
       title: 'DevTools Suite',
-      description: 'Collection of developer productivity tools including API tester, JSON formatter, regex builder, and color palette generator with Flutter Web.',
+      description:
+          'Collection of developer productivity tools including API tester, JSON formatter, regex builder, and color palette generator with Flutter Web.',
       technologies: ['Flutter Web', 'Bloc', 'Hive', 'Dart'],
       gradientStart: Color(0xFF7C4DFF),
       gradientEnd: Color(0xFFFF6B6B),
@@ -179,7 +223,8 @@ class PortfolioData {
     ),
     Project(
       title: 'TravelBuddy',
-      description: 'AI-powered travel planning app with itinerary generation, flight tracking, language translation, and AR-based navigation.',
+      description:
+          'AI-powered travel planning app with itinerary generation, flight tracking, language translation, and AR-based navigation.',
       technologies: ['Flutter', 'BLoC', 'Google Maps', 'OpenAI', 'Firebase'],
       gradientStart: Color(0xFF448AFF),
       gradientEnd: Color(0xFF00E5FF),
@@ -190,7 +235,15 @@ class PortfolioData {
     ),
   ];
 
-  static const List<String> projectCategories = ['All', 'Fintech', 'Health', 'Social', 'E-commerce', 'Tooling', 'Travel'];
+  static const List<String> projectCategories = [
+    'All',
+    'Fintech',
+    'Health',
+    'Social',
+    'E-commerce',
+    'Tooling',
+    'Travel',
+  ];
 
   static const List<Map<String, String>> socialLinks = [
     {'icon': 'github', 'url': 'https://github.com'},

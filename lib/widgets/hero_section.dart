@@ -5,7 +5,14 @@ import '../theme/app_theme.dart';
 import '../data/portfolio_data.dart';
 
 class HeroSection extends StatefulWidget {
-  const HeroSection({super.key});
+  final VoidCallback? onViewWork;
+  final VoidCallback? onGetInTouch;
+
+  const HeroSection({
+    super.key,
+    this.onViewWork,
+    this.onGetInTouch,
+  });
 
   @override
   State<HeroSection> createState() => _HeroSectionState();
@@ -20,10 +27,9 @@ class _HeroSectionState extends State<HeroSection>
   bool _showCursor = true;
 
   final List<String> _roles = [
-    'Senior Flutter Developer',
+    'Flutter Developer',
     'Cross-Platform Architect',
     'UI/UX Enthusiast',
-    'Open Source Contributor',
   ];
   int _roleIndex = 0;
 
@@ -69,7 +75,10 @@ class _HeroSectionState extends State<HeroSection>
     _typingTimer = Timer.periodic(const Duration(milliseconds: 30), (timer) {
       if (_displayedText.isNotEmpty) {
         setState(() {
-          _displayedText = _displayedText.substring(0, _displayedText.length - 1);
+          _displayedText = _displayedText.substring(
+            0,
+            _displayedText.length - 1,
+          );
         });
       } else {
         timer.cancel();
@@ -111,11 +120,13 @@ class _HeroSectionState extends State<HeroSection>
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Expanded(child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: _buildContent(),
-                        )),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: _buildContent(),
+                          ),
+                        ),
                         const SizedBox(width: 48),
                         _buildAvatar(isMobile),
                       ],
@@ -164,9 +175,10 @@ class _HeroSectionState extends State<HeroSection>
             _displayedText,
             style: TextStyle(
               fontSize: 22,
-              foreground: Paint()..shader = AppTheme.primaryGradient.createShader(
-                const Rect.fromLTWH(0, 0, 300, 30),
-              ),
+              foreground: Paint()
+                ..shader = AppTheme.primaryGradient.createShader(
+                  const Rect.fromLTWH(0, 0, 300, 30),
+                ),
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -190,15 +202,15 @@ class _HeroSectionState extends State<HeroSection>
       Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          _buildGradientButton('View My Work', Icons.arrow_forward),
+          _buildGradientButton('View My Work', Icons.arrow_forward, widget.onViewWork),
           const SizedBox(width: 16),
-          _buildOutlineButton('Get in Touch'),
+          _buildOutlineButton('Get in Touch', widget.onGetInTouch),
         ],
       ),
     ];
   }
 
-  Widget _buildGradientButton(String text, IconData icon) {
+  Widget _buildGradientButton(String text, IconData icon, VoidCallback? onTap) {
     return Container(
       decoration: BoxDecoration(
         gradient: AppTheme.primaryGradient,
@@ -239,7 +251,7 @@ class _HeroSectionState extends State<HeroSection>
     );
   }
 
-  Widget _buildOutlineButton(String text) {
+  Widget _buildOutlineButton(String text, VoidCallback? onTap) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -249,7 +261,7 @@ class _HeroSectionState extends State<HeroSection>
         color: Colors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(12),
-          onTap: () {},
+          onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
             child: Text(
@@ -294,7 +306,7 @@ class _HeroSectionState extends State<HeroSection>
         ),
         child: const Center(
           child: Text(
-            'AC',
+            'SH',
             style: TextStyle(
               fontSize: 72,
               fontWeight: FontWeight.bold,
@@ -307,10 +319,7 @@ class _HeroSectionState extends State<HeroSection>
   }
 
   Widget _buildBackgroundParticles() {
-    return CustomPaint(
-      painter: _ParticlePainter(),
-      size: Size.infinite,
-    );
+    return CustomPaint(painter: _ParticlePainter(), size: Size.infinite);
   }
 }
 
