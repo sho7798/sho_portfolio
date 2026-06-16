@@ -56,8 +56,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
   void _scrollToSection(String section) {
     final key = _sectionKeys[section];
     if (key?.currentContext != null) {
-      Scrollable.ensureVisible(
-        key!.currentContext!,
+      final box = key!.currentContext!.findRenderObject() as RenderBox;
+      final position = box.localToGlobal(Offset.zero);
+      final target = _scrollController.offset + position.dy - 64;
+      _scrollController.animateTo(
+        target.clamp(0.0, _scrollController.position.maxScrollExtent),
         duration: const Duration(milliseconds: 800),
         curve: Curves.easeInOutCubic,
       );
