@@ -68,9 +68,10 @@ class AboutSection extends StatelessWidget {
           style: TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.bold,
-            foreground: Paint()..shader = AppTheme.primaryGradient.createShader(
-              const Rect.fromLTWH(0, 0, 400, 40),
-            ),
+            foreground: Paint()
+              ..shader = AppTheme.primaryGradient.createShader(
+                const Rect.fromLTWH(0, 0, 400, 40),
+              ),
           ),
         ),
       ],
@@ -120,10 +121,7 @@ class AboutSection extends StatelessWidget {
           const SizedBox(width: 6),
           Text(
             text,
-            style: const TextStyle(
-              color: AppTheme.textSecondary,
-              fontSize: 13,
-            ),
+            style: const TextStyle(color: AppTheme.textSecondary, fontSize: 13),
           ),
         ],
       ),
@@ -140,17 +138,17 @@ class AboutSection extends StatelessWidget {
       ),
       child: Column(
         children: [
-          _buildStatItem('8+', 'Years Experience'),
+          _buildStatItem('4+', 'Years Experience'),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 24),
             child: Divider(color: AppTheme.border, height: 1),
           ),
-          _buildStatItem('50+', 'Apps Built'),
+          _buildStatItem('10+', 'Apps Built'),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 24),
             child: Divider(color: AppTheme.border, height: 1),
           ),
-          _buildStatItem('2M+', 'Users Reached'),
+          _buildStatItem('1M+', 'Users Reached'),
         ],
       ),
     );
@@ -164,9 +162,10 @@ class AboutSection extends StatelessWidget {
           style: TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.bold,
-            foreground: Paint()..shader = AppTheme.primaryGradient.createShader(
-              const Rect.fromLTWH(0, 0, 100, 40),
-            ),
+            foreground: Paint()
+              ..shader = AppTheme.primaryGradient.createShader(
+                const Rect.fromLTWH(0, 0, 100, 40),
+              ),
           ),
         ),
         const SizedBox(height: 4),

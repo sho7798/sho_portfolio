@@ -1,4 +1,4 @@
-# Portfolio | Senior Flutter Developer
+# Portfolio | Flutter Developer
 
 A unique, animated portfolio website built with **Flutter Web** — showcasing skills, experience, and projects for a senior Flutter developer.
 

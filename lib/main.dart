@@ -19,7 +19,7 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Alex Chen | Senior Flutter Developer',
+      title: 'Su Hlaing Oo | Flutter Developer',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
       home: const PortfolioPage(),
@@ -36,7 +36,14 @@ class PortfolioPage extends StatefulWidget {
 
 class _PortfolioPageState extends State<PortfolioPage> {
   final ScrollController _scrollController = ScrollController();
-  final List<String> _sections = ['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'];
+  final List<String> _sections = [
+    'Home',
+    'About',
+    'Skills',
+    'Experience',
+    'Projects',
+    'Contact',
+  ];
   final Map<String, GlobalKey> _sectionKeys = {
     'Home': GlobalKey(),
     'About': GlobalKey(),
